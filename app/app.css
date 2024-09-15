@@ -1,0 +1,9 @@
+@media (min-width: 1024px) {
+    .snap-container {
+      scroll-snap-type: y mandatory;
+    }
+  
+    .snap-child {
+      scroll-snap-align: start;
+    }
+  }
