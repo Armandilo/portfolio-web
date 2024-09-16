@@ -4,7 +4,7 @@ import "./globals.css";
 import { useEffect, useState } from "react";
 import { Suspense } from "react";
 import LoadingPage from "./loadingPage";
-import Head from "next/head";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +30,7 @@ export default function({
     };
   
     window.addEventListener('mousemove', handleMouseMove);
-
+    document.title = "Muhd Armand";
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
@@ -38,9 +38,7 @@ export default function({
 
   return (
     <html lang="en">
-      <Head>
-        <title>Muhd Armand</title>
-      </Head>
+    
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
