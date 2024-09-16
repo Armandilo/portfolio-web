@@ -23,8 +23,8 @@
   .embla__slide__img {
     border-radius: 1.8rem;
     display: block;
-    height: var(--slide-height);
-    width: 100%;
+    height: 100%;
+    width: var(--slide-size);
     object-fit: cover;
   }
 

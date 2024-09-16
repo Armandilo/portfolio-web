@@ -6,6 +6,105 @@ import { AiFillDatabase } from "react-icons/ai";
 import { FaTools } from "react-icons/fa";
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import Lottie from "lottie-react";
+import Particles from "../../../public/particles.json";
+import { motion } from 'framer-motion';
+
+const revfadeInAnimationVariants = {
+  initial: {
+    opacity:0,
+    y: -50
+  },
+  animate: {
+    opacity:1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+    },
+  }
+}
+
+const scaleAnimationVariants = {
+  initial: {
+    opacity:0,
+    scale: 0.9
+  },
+  animate: {
+    opacity:1,
+    scale: 1,
+    transition: {
+      duration: 1,
+    },
+  }
+}
+
+const fade1 = {
+  initial: {
+    opacity:0,
+    y: 50
+  },
+  animate: {
+    opacity:1,
+    y: 0,
+    transition: {
+      delay: 0.0,
+      duration: 0.5,
+      
+
+    },
+  }
+  
+}
+const fade2 = {
+  initial: {
+    opacity:0,
+    y: 50
+  },
+  animate: {
+    opacity:1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.5,
+
+    },
+  }
+
+}
+
+const fade3 = {
+  initial: {
+    opacity:0,
+    y: 50
+  },
+  animate: {
+    opacity:1,
+    y: 0,
+    transition: {
+      delay: 1,
+      duration:0.5,
+
+    },
+  }
+}
+
+const fade4 = {
+  initial: {
+    opacity:0,
+    y: 50
+  },
+  animate: {
+    opacity:1,
+    y: 0,
+    transition: {
+      delay: 1.5,
+      duration: 0.5,
+      
+
+    },
+  }
+  
+}
 
 
     
@@ -50,7 +149,7 @@ const Skills = () => {
 
 
   return (
-    <div className='relative isolate px-6 lg:px-8 bg-[#04091f] lg:h-screen bg-opacity-50 overflow-hidden'>
+    <div className='relative isolate px-6  lg:px-8 bg-[#04091f] lg:h-screen bg-opacity-50 overflow-hidden'>
               <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-100 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -62,20 +161,21 @@ const Skills = () => {
             }}
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
-        </div>  
+        </div>
+        <Lottie animationData={Particles} className="absolute mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover z-[-1] opacity-30" />  
       <div className='mx-auto max-w-7xl sm:py-0 lg:py-24 2xl:py-48 flex flex-wrap gap-4 justify-center items-center'>
-        <div className="mx-auto max-w-screen-md flex flex-col justify-center items-center text-center mb-0 lg:mb-4">
+        <motion.div variants={revfadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className="mx-auto max-w-screen-md flex flex-col justify-center items-center text-center mb-0 lg:mb-4">
           <div className='w-max'>
-            <h2 ref={elementRef} className="animate-typingonce w-[max-content] overflow-hidden whitespace-nowrap border-r-4 pr-1 border-r-white mb-4 text-xl sm:text-4xl mt-8 sm:mt-0 tracking-tight font-extrabold text-gray-900 dark:text-white"><span className='text-xl sm:text-4xl font-extrabold text-indigo-700'>{'</'}</span>Crafting Apps with Precision<span className='text-xl sm:text-4xl text-indigo-700 font-extrabold'>{'>'}</span></h2>
+            <h2 ref={elementRef} className="animate-typingonce w-[max-content] overflow-hidden whitespace-nowrap border-r-4 pr-1 border-r-white mb-4 text-2xl sm:text-4xl mt-8 sm:mt-0 tracking-tight font-extrabold text-gray-900 dark:text-white"><span className='text-xl sm:text-4xl font-extrabold text-indigo-700'>{'</'}</span>Crafting Apps with Precision<span className='text-xl sm:text-4xl text-indigo-700 font-extrabold'>{'>'}</span></h2>
           </div> 
             <p className="mb-5 text-sm font-light text-white-600 sm:text-xl">From front-end magic 🎨 to back-end logic ⚙️, I bring a full toolkit of skills to craft high-performing modern applications</p>
-        </div>
-        <div className='h-full w-full mx-auto bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+        </motion.div>
+        <motion.div variants={fade1} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full mx-auto bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
          
               <div className='flex flex-col sm:flex-row justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center sm:border-r border-gray-500 px-14 sm:ml-[-50px]'>
                   <span><FaCode size={30} className='text-indigo-700'/></span>
-                  <h2 className='text-2xl font-semibold tracking-wider'>Languages</h2>
+                  <h2 className='text-xl sm:text-2xl font-semibold tracking-wider'>Languages</h2>
                 </div>
                   <div className='grid grid-cols-3 justify-center items-center mt-4 sm:mt-0 sm:flex sm:flex-wrap gap-2 sm:gap-8 px-0 sm:px-12 ml-[15px]'>
                     
@@ -91,14 +191,14 @@ const Skills = () => {
                     
                   </div>
               </div>
-        </div>
+        </motion.div>
 
         <div className='grid grid-cols-1 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-1 md:grid-rows-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
-          <div className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          <motion.div variants={fade2} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><SiFramework size={30} className='text-indigo-700'/></span>
-                  <h2 className='text-2xl font-semibold tracking-wider'>Frameworks</h2>
+                  <h2 className='text-xl sm:text-2xl font-semibold tracking-wider'>Frameworks</h2>
                 </div>
 
                 <div className='grid grid-cols-3 justify-center items-center mt-4 sm:mt-4 sm:flex sm:flex-wrap gap-6 sm:px-12 sm:gap-8 px-0 ml-[15px]'>
@@ -110,12 +210,12 @@ const Skills = () => {
                   <div className='lg:tooltip' data-tip="Flutter"><img src="./flutter.svg" alt="" className='w-auto h-10 sm:h-12' /></div>
                   </div>
               </div>
-          </div>
-          <div className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          </motion.div>
+          <motion.div variants={fade3} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><AiFillDatabase size={30} className='text-indigo-700'/></span>
-                  <h2 className='text-2xl font-semibold tracking-wider'>Databases</h2>
+                  <h2 className='text-xl sm:text-2xl font-semibold tracking-wider'>Databases</h2>
                 </div>
 
                 <div className='grid grid-cols-3 justify-center items-center mt-4 sm:mt-4 sm:flex sm:flex-wrap gap-6 sm:px-12 sm:gap-8 px-0 ml-[15px]'>
@@ -127,12 +227,12 @@ const Skills = () => {
                   <div className='lg:tooltip' data-tip="Supabase"><img src="./supabase.png" alt="" className='w-auto h-10 sm:h-12' /></div>
                   </div>
               </div>
-          </div>
-          <div className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          </motion.div>
+          <motion.div variants={fade4} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><FaTools size={30} className='text-indigo-700'/></span>
-                  <h2 className='text-2xl font-semibold tracking-wider'>Tools</h2>
+                  <h2 className='text-xl sm:text-2xl font-semibold tracking-wider'>Tools</h2>
                 </div>
 
                 <div className='grid grid-cols-3 justify-center items-center mt-4 sm:mt-4 sm:flex sm:flex-wrap gap-6 sm:px-12 sm:gap-8 px-0 ml-[15px]'>
@@ -144,7 +244,7 @@ const Skills = () => {
                   <div className='lg:tooltip' data-tip="ViteJS"><img src="./vite.svg" alt="" className='w-auto h-10 sm:h-12' /></div>
                   </div>
               </div>
-          </div>
+          </motion.div>
 
         </div>
 

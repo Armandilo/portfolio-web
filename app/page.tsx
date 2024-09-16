@@ -14,7 +14,7 @@ export default function Home() {
       <div className="snap-child md:h-auto lg:h-screen">
         <Header/>
       </div>
-      <div className="snap-child md:h-auto lg:h-screen">
+      <div id="skills-section" className="snap-child md:h-auto lg:h-screen">
         <Skills/>
       </div>
       <div className="snap-child md:h-auto lg:h-screen">
@@ -22,12 +22,6 @@ export default function Home() {
       </div>
       <div className="snap-child md:h-auto lg:h-screen">
         <Repos/>
-      </div>
-      <div className="snap-child md:h-auto lg:h-screen">
-        <Contact/>
-      </div>
-      <div className="snap-child md:h-auto lg:h-screen">
-        <Footer/>
       </div>
     </main>
   );

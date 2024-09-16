@@ -36,6 +36,18 @@ const config: Config = {
           }
         },
 
+        popup:{
+          "0%": {
+            opacity: "0",
+           
+          },
+          "100%": {
+            opacity: "0.3",
+            
+          }
+
+        },
+
         typingonce: {
           "0%": {
             width: "0%",
@@ -58,7 +70,8 @@ const config: Config = {
         typing: "typing 4s steps(16) infinite alternate, blink 1s infinite",
         typingonce: "typingonce 4s steps(32) alternate, blink 1s infinite",
         typingonce1: "typingonce 2s steps(16) alternate, blink 1s infinite",
-        blink: "blink 1s infinite"
+        blink: "blink 1s infinite",
+        popup: "popup 4s forwards",
       },
        
     },
