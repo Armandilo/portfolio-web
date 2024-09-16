@@ -167,11 +167,11 @@ const Skills = () => {
         </div>
         <Lottie animationData={Particles} className="absolute mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover z-[-1] opacity-30" />  
       <div className='mx-auto max-w-7xl sm:py-0 lg:py-24 2xl:py-48 flex flex-wrap gap-4 justify-center items-center'>
-        <motion.div variants={revfadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className="mx-auto max-w-screen-md flex flex-col justify-center items-center text-center mb-0 lg:mb-4">
+        <motion.div variants={revfadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className="mx-auto max-w-screen-md flex flex-col justify-center items-center text-center mb-0 lg:mb-2">
           <div className='w-max'>
             <h2 ref={elementRef} className="animate-typingonce w-[max-content] overflow-hidden whitespace-nowrap border-r-4 pr-1 border-r-white mb-4 text-2xl sm:text-4xl mt-8 sm:mt-0 tracking-tight font-extrabold text-gray-900 dark:text-white"><span className='text-xl sm:text-4xl font-extrabold text-indigo-700'>{'</'}</span>Crafting Apps with Precision<span className='text-xl sm:text-4xl text-indigo-700 font-extrabold'>{'>'}</span></h2>
           </div> 
-            <p className="mb-5 text-sm font-light text-white-600 sm:text-xl">From front-end magic 🎨 to back-end logic ⚙️, I bring a full toolkit of skills to craft high-performing modern applications</p>
+            <p className="mb-2 text-sm font-light text-white-600 sm:text-xl">From front-end magic 🎨 to back-end logic ⚙️, I bring a full toolkit of skills to craft high-performing modern applications</p>
         </motion.div>
         <motion.div variants={fade1} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full mx-auto bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
          
