@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Navbar from "./components/Navbar/Navbar";
+
 import Header from "./components/Header/Header";
 import Highlight from "./components/Highlight/Highlight";
 import Repos from "./components/Repos/Repos";
-import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact";
 import Skills from "./components/Skills/Skills";
 import './app.css';
 

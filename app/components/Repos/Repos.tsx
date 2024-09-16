@@ -8,9 +8,12 @@ import { CgWebsite } from "react-icons/cg";
 import { LuArrowUpRight } from "react-icons/lu";
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import Lottie, {LottieRefCurrentProps} from 'lottie-react';
+import {LottieRefCurrentProps} from 'lottie-react';
 import GitHub from '../../../public/github.json';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic'
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const fade1 = {
   initial: {

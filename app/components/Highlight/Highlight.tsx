@@ -6,9 +6,12 @@ import Carousel from '../carousel/Carousel';
 import { BiSolidAward } from "react-icons/bi";
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import Lottie, {LottieRefCurrentProps} from 'lottie-react';
+import {LottieRefCurrentProps} from 'lottie-react';
 import Wave from '../../../public/wave.json';
 import {motion} from 'framer-motion';
+import dynamic from 'next/dynamic'
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 const features = [
   {
     name: 'PIXEL Gold Award : ',

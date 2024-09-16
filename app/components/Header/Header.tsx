@@ -7,11 +7,13 @@ import { useEffect } from 'react'
 import { FiGithub } from "react-icons/fi";
 import { TbBrandLinktree } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
-import Lottie, {LottieRefCurrentProps} from "lottie-react";
+import {LottieRefCurrentProps} from "lottie-react";
 import Laptop from "../../../public/laptop.json";
 import { useRef } from 'react';
 import {motion} from 'framer-motion';
+import dynamic from 'next/dynamic'
 
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 
 

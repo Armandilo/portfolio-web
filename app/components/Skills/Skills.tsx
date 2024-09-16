@@ -6,9 +6,12 @@ import { AiFillDatabase } from "react-icons/ai";
 import { FaTools } from "react-icons/fa";
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import Lottie from "lottie-react";
+
 import Particles from "../../../public/particles.json";
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic'
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const revfadeInAnimationVariants = {
   initial: {
