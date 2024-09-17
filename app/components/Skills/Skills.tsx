@@ -9,7 +9,8 @@ import { useRef } from 'react';
 
 import Particles from "../../../public/particles.json";
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
+import { useMediaQuery } from 'react-responsive';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -118,6 +119,7 @@ const fade4 = {
 const Skills = () => {
   const elementRef = useRef(null);
   const hasAnimated = useRef(false);
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -173,7 +175,7 @@ const Skills = () => {
           </div> 
             <p className="mb-2 text-sm font-light text-white-600 sm:text-xl">From front-end magic 🎨 to back-end logic ⚙️, I bring a full toolkit of skills to craft high-performing modern applications</p>
         </motion.div>
-        <motion.div variants={fade1} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full mx-auto bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+        <motion.div variants={fade1} initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='h-full w-full mx-auto bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
          
               <div className='flex flex-col sm:flex-row justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center sm:border-r border-gray-500 px-14 sm:ml-[-50px]'>
@@ -197,7 +199,7 @@ const Skills = () => {
         </motion.div>
 
         <div className='grid grid-cols-1 sm:grid-cols-1 mb-10 sm:grid-rows-3 md:grid-cols-1 md:grid-rows-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
-          <motion.div variants={fade2} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          <motion.div variants={fade2} initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><SiFramework size={30} className='text-indigo-700'/></span>
@@ -214,7 +216,7 @@ const Skills = () => {
                   </div>
               </div>
           </motion.div>
-          <motion.div variants={fade3} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          <motion.div variants={fade3} initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><AiFillDatabase size={30} className='text-indigo-700'/></span>
@@ -231,7 +233,7 @@ const Skills = () => {
                   </div>
               </div>
           </motion.div>
-          <motion.div variants={fade4} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
+          <motion.div variants={fade4} initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>
                   <span><FaTools size={30} className='text-indigo-700'/></span>

@@ -289,7 +289,7 @@ const Repos = () => {
         <div className='grid grid-cols-1 sm:grid-cols-1 sm:grid-rows-2 md:grid-cols-1 md:grid-rows-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
           {/* Repo 1 */}
           <a href="https://github.com/Armandilo/usmtalent-app" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade1 : fader1} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade1 : fader1} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 usmtalent-app</span>
@@ -314,7 +314,7 @@ const Repos = () => {
 
           {/* Repo 2 */}
           <a href="https://github.com/Armandilo/backend-nextjs-django-eventmanagement" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade2 : fader2} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade2 : fader2} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 django-event</span>
@@ -339,7 +339,7 @@ const Repos = () => {
 
           {/* Repo 3 */}
           <a href="https://github.com/Armandilo/frontend-nextjs-django-eventmanagement" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade3 : fader3} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade3 : fader3} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 nextjs-event</span>
@@ -364,7 +364,7 @@ const Repos = () => {
 
           {/* Repo 4 */}
           <a href="https://github.com/Armandilo/Bah_Project_CAT304" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade4 : fader4} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade4 : fader4} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5: 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 bah-app</span>
@@ -389,7 +389,7 @@ const Repos = () => {
 
           {/* Repo 5 */}
           <a href="https://github.com/Armandilo/next-daily-dose" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade5 : fader5} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade5 : fader5} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5 : 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 dailydose-app</span>
@@ -414,7 +414,7 @@ const Repos = () => {
 
           {/* Repo 6 */}
           <a href="https://github.com/Armandilo/Cinema-Booking-App" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={isLargeScreen ? fade6 : fader6} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade6 : fader6} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: isLargeScreen ? 0.5: 0}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 cinema-app</span>
@@ -441,7 +441,7 @@ const Repos = () => {
 
         </div>
 
-        <h1 className='mb-12 mt-2 lg:mt-6 2xl:mt-24'>View more on my <a href="https://github.com/Armandilo" target='_blank' rel='noopener noreferrer' className='font-semibold hover:text-gray-300'>Github Profile</a></h1>
+        <h1 className='mb-32 mt-2 lg:mt-6 2xl:mt-24'>View more on my <a href="https://github.com/Armandilo" target='_blank' rel='noopener noreferrer' className='font-semibold hover:text-gray-300'>Github Profile</a></h1>
     
             
      
