@@ -179,11 +179,11 @@ export default function Header() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-6 lg:px-8">
+      <div className="relative isolate px-6 pt-6 lg:px-8 h-screen  lg:h-screen overflow-hidden">
         <Lottie onDOMLoaded={()=>{
-          laptopRef.current?.setSpeed(0.5)}} lottieRef={laptopRef} animationData={Laptop} className="absolute mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover z-[-1] opacity-30 animate-popup"  />
+          laptopRef.current?.setSpeed(0.5)}} lottieRef={laptopRef} animationData={Laptop} className="absolute mt-0 sm:mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-full sm:h-full w-[350vw] h-[350vh] object-cover z-[-1] opacity-30 animate-popup"  />
        
-        <div className="mx-auto max-w-2xl py-24 lg:py-44 2xl:py-64">    
+        <div className="mx-auto max-w-2xl py-40 lg:py-44 2xl:py-64">    
           <motion.div variants={revfadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{once:true,}} className='flex justify-center sm:mb-6 sm:flex sm:justify-center'>
             <div className='inline-flex items-center'>
               <span className='relative inline-block overflow-hidden rounded-full p-[1px]'>

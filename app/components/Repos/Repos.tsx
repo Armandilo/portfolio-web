@@ -11,7 +11,8 @@ import { useEffect } from 'react';
 import {LottieRefCurrentProps} from 'lottie-react';
 import GitHub from '../../../public/github.json';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
+import { useMediaQuery } from 'react-responsive';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -119,10 +120,118 @@ const fade6 = {
   hover: { scale: 1.02, transition: { duration: 0.4 } },
 }
 
+
+//sm screen
+
+const fader1 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 0.0,
+      duration: 0.2,
+      
+
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+  
+}
+const fader2 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 0.2,
+      duration: 0.2,
+
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+
+}
+
+const fader3 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 0.4,
+      duration:0.2,
+
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+}
+
+const fader4 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      duration:0.2,
+
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+}
+
+const fader5 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 0.8,
+      duration:0.2,
+ 
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+}
+
+const fader6 = {
+  initial: {
+    opacity:0,
+    x: 50
+  },
+  animate: {
+    opacity:1,
+    x: 0,
+    transition: {
+      delay: 1,
+      duration:0.2,
+  
+    },
+  },
+  hover: { scale: 1.02, transition: { duration: 0.4 } },
+}
+
 const Repos = () => {
   const elementRef = useRef(null);
   const hasAnimated = useRef(false);
   const gitRef = useRef<LottieRefCurrentProps>(null);
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -155,7 +264,7 @@ const Repos = () => {
     };
   },[]);
   return (
-    <div className='relative isolate px-6 lg:px-8 bg-[#04091f] lg:h-screen bg-opacity-50 overflow-hidden'>
+    <div className='relative isolate px-6 lg:px-8 bg-[#04091f] h-max py-6 lg:h-screen bg-opacity-50 overflow-hidden'>
         <Lottie onDOMLoaded={()=>{gitRef.current?.setSpeed(0.1)}} lottieRef={gitRef} animationData={GitHub} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 object-cover z-[-1] lg:mt-20 opacity-5" />
         <div
           aria-hidden="true"
@@ -169,7 +278,7 @@ const Repos = () => {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>  
-      <div className='mx-auto max-w-7xl sm:py-0 lg:py-32 2xl:py-48 flex flex-wrap gap-4 justify-center items-center'>
+      <div className='mx-auto max-w-7xl sm:py-6 lg:py-32 2xl:py-48 flex flex-wrap gap-4 justify-center items-center'>
         <div className="mx-auto max-w-screen-md flex flex-col justify-center items-center text-center mb-0 lg:mb-4">
             <div className="w-max">
               <h2 ref={elementRef} className="animate-typingonce1 w-[max-content] overflow-hidden whitespace-nowrap border-r-4 pr-1 border-r-white mb-4 text-xl sm:text-4xl mt-8 sm:mt-0 tracking-tight font-extrabold text-gray-900 dark:text-white"><span className='text-xl sm:text-4xl font-extrabold text-indigo-700'>{'</'}</span>Code in Action<span className='text-xl sm:text-4xl text-indigo-700 font-extrabold'>{'>'}</span></h2>
@@ -180,7 +289,7 @@ const Repos = () => {
         <div className='grid grid-cols-1 sm:grid-cols-1 sm:grid-rows-2 md:grid-cols-1 md:grid-rows-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
           {/* Repo 1 */}
           <a href="https://github.com/Armandilo/usmtalent-app" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade1} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade1 : fader1} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 usmtalent-app</span>
@@ -205,7 +314,7 @@ const Repos = () => {
 
           {/* Repo 2 */}
           <a href="https://github.com/Armandilo/backend-nextjs-django-eventmanagement" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade2} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade2 : fader2} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 django-event</span>
@@ -230,7 +339,7 @@ const Repos = () => {
 
           {/* Repo 3 */}
           <a href="https://github.com/Armandilo/frontend-nextjs-django-eventmanagement" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade3} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade3 : fader3} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 nextjs-event</span>
@@ -255,7 +364,7 @@ const Repos = () => {
 
           {/* Repo 4 */}
           <a href="https://github.com/Armandilo/Bah_Project_CAT304" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade4} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade4 : fader4} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 bah-app</span>
@@ -280,7 +389,7 @@ const Repos = () => {
 
           {/* Repo 5 */}
           <a href="https://github.com/Armandilo/next-daily-dose" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade5} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade5 : fader5} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 dailydose-app</span>
@@ -305,7 +414,7 @@ const Repos = () => {
 
           {/* Repo 6 */}
           <a href="https://github.com/Armandilo/Cinema-Booking-App" target='_blank' rel='noopener noreferrer'>
-          <motion.div variants={fade6} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
+          <motion.div variants={isLargeScreen ? fade6 : fader6} whileHover="hover" initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='group relative h-full w-full flex bg-gray-500 p-6 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800 cursor-pointer'>
               <div className='flex flex-col'>
                 <div className='flex flex-row gap-2 justif-center items-center'>
                     <span className='text-lg'>🔗 cinema-app</span>
@@ -332,7 +441,7 @@ const Repos = () => {
 
         </div>
 
-        <h1 className='mb-6 lg:mt-6 2xl:mt-24'>View more on my <a href="https://github.com/Armandilo" target='_blank' rel='noopener noreferrer' className='font-semibold hover:text-gray-300'>Github Profile</a></h1>
+        <h1 className='mb-12 mt-2 lg:mt-6 2xl:mt-24'>View more on my <a href="https://github.com/Armandilo" target='_blank' rel='noopener noreferrer' className='font-semibold hover:text-gray-300'>Github Profile</a></h1>
     
             
      

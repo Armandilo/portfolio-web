@@ -152,7 +152,7 @@ const Skills = () => {
 
 
   return (
-    <div className='relative isolate px-6  lg:px-8 bg-[#04091f] lg:h-screen bg-opacity-50 overflow-hidden'>
+    <div className='relative isolate px-6  lg:px-8 bg-[#04091f] h-max py-10 sm:py-0 lg:h-screen bg-opacity-50 overflow-hidden'>
               <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-100 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -196,7 +196,7 @@ const Skills = () => {
               </div>
         </motion.div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-1 md:grid-rows-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 mb-10 sm:grid-rows-3 md:grid-cols-1 md:grid-rows-3 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full'>
           <motion.div variants={fade2} initial="initial" whileInView="animate" viewport={{once:true, amount: 0.5}} className='h-full w-full flex justify-center bg-gray-500 p-8 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-800'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-row gap-2 items-center ml-[0px]'>

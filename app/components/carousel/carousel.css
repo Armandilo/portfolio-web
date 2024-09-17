@@ -23,9 +23,10 @@
   .embla__slide__img {
     border-radius: 1.8rem;
     display: block;
-    height: 100%;
-    width: var(--slide-size);
+    height: auto;
+    width: 100%;
     object-fit: cover;
+    aspect-ratio: 16 / 9; /* Adjust this ratio as needed */
   }
 
   .embla__slide__number {
