@@ -9,16 +9,16 @@ export default function Home() {
 
   return (
     <main className="snap-container overflow-y-scroll scroll-smooth h-screen">
-      <div className="snap-child md:h-auto lg:h-screen">
+      <div className="snap-child md:h-auto scroll-smooth lg:h-screen">
         <Header/>
       </div>
-      <div id="skills-section" className="snap-child md:h-auto lg:h-screen">
+      <div id="skills-section" className="snap-child scroll-smooth md:h-auto lg:h-screen">
         <Skills/>
       </div>
-      <div className="snap-child md:h-auto lg:h-screen">
+      <div className="snap-child scroll-smooth md:h-auto lg:h-screen">
         <Highlight/>
       </div>
-      <div className="snap-child md:h-auto lg:h-screen">
+      <div className="snap-child scroll-smooth md:h-auto lg:h-screen">
         <Repos/>
       </div>
     </main>
