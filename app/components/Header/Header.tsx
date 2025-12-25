@@ -192,7 +192,7 @@ export default function Header() {
                   <div className='bg-green-500 size-2.5 rounded-full relative'>
                     <div className='bg-green-500 rounded-full absolute inset-0 animate-ping'></div>
                   </div>
-                  Fresh Grad Software Engineer 💻&nbsp;{' '}
+                  Software Engineer 💻&nbsp;{' '}
                   
                 </div>
               </span>
@@ -210,7 +210,7 @@ export default function Header() {
             </div>
             
             <p className="mt-4 text-sm sm:text-xl leading-6 text-white-600">
-            Fresh out of uni 🎓, turning ideas into sleek apps 💻. 
+            Turning ideas into sleek apps 💻, end to end. 
             <br />
             <span>
             Looking for exciting job opportunities 👀
